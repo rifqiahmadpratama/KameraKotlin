@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.SyncStateContract.Helpers.insert
+import android.util.Log
 import android.widget.Toast
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.DexterBuilder
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     companion object{
         val MY_CAMERA_REQUEST_CODE  = 7171 //Any number you want
+
+        val hitung  = 1 + 3
     }
 
     var imageUri: Uri? = null
@@ -31,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.d("Hitungan adalah = ", hitung.toString())
         //Event
         btn_camera.setOnClickListener {
             Dexter.withContext(this)
